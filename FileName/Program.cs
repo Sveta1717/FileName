@@ -12,20 +12,16 @@ namespace FileName
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Показати шдях до директорії");
-
-
-
-            string text = File.ReadAllText(Console.ReadLine(), Encoding.GetEncoding(1251));
+            Console.WriteLine("Показати шлях до директорії");
+            //FileStream fs = new FileStream(@"D:\Документи", FileMode.Open, FileAccess.Read);
+            string text = Console.ReadLine();            
 
             Console.WriteLine("Введить слово яке щукаете");
-            string pattern = Console.ReadLine();
+            string word = Console.ReadLine();
             int i = 0;
-            foreach (Match m in Regex.Matches(text, pattern, RegexOptions.IgnoreCase))
+            foreach (Match m in Regex.Matches(text, word, RegexOptions.IgnoreCase))
                 i += 1;
-            Console.WriteLine(i);
-
-            Console.ReadKey();
+            Console.WriteLine(i); 
         }
     }
 }
