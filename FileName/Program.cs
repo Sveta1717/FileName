@@ -12,6 +12,7 @@ namespace FileName
     {
         static void Main(string[] args)
         {
+            //string[] files = Directory.GetFiles(@"D:\\Документи", "*", SearchOption.AllDirectories);
             Console.WriteLine("Показати шлях до директорії");
             //FileStream fs = new FileStream(@"D:\Документи", FileMode.Open, FileAccess.Read);
             string text = Console.ReadLine();            
